@@ -64,4 +64,7 @@ export class WindowsManager extends Entity {
         });
         this.showingWindows.clear();
     }
+
+    OnAfterSceneLaunch(): void {
+    }
 }

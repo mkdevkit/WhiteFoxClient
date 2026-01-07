@@ -6,42 +6,62 @@ export class Entity {
 
     public Init(): void {
         // 初始化实体
-        this.OnPreInit();
+        this.PreInit();
         this.OnInit();
-        this.OnPostInit();
+        this.PostInit();
     }
 
     /**
      * 实体前期初始化逻辑
      */
-    public OnPreInit(): void {
+    protected OnPreInit(): void {
         // 实体前期初始化逻辑
     }
 
-    public OnInit(): void {
+    protected PreInit(): void {
+        // 实体前期初始化逻辑
+        this.OnPreInit();
+    }
+
+    protected OnInit(): void {
         // 实体初始化逻辑
     }
 
-    public OnPostInit(): void {
+    protected OnPostInit(): void {
         // 实体后期初始化逻辑
+    }
+
+    protected PostInit(): void {
+        // 实体后期初始化逻辑
+        this.OnPostInit();
     }
 
     public Destroy(): void {
         // 实体销毁逻辑
-        this.OnPreDestroy();
+        this.PreDestroy();
         this.OnDestroy();
-        this.OnPostDestroy();
+        this.PostDestroy();
     }
 
-    public OnDestroy(): void {
+    protected OnDestroy(): void {
         // 实体销毁逻辑
     }
 
-    public OnPreDestroy(): void {
+    protected OnPreDestroy(): void {
         // 实体前期销毁逻辑
     }
 
-    public OnPostDestroy(): void {
+    protected PreDestroy(): void {
+        // 实体前期销毁逻辑
+        this.OnPreDestroy();
+    }
+
+    protected OnPostDestroy(): void {
         // 实体后期销毁逻辑
+    }
+
+    protected PostDestroy(): void {
+        // 实体后期销毁逻辑
+        this.OnPostDestroy();
     }
 }

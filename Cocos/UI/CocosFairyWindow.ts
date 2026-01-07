@@ -5,7 +5,6 @@ export class CocosFairyWindow extends Window {
     protected view: fgui.GComponent | null = null;
     protected window: fgui.Window | null = null;
 
-    //构造函数
     constructor() {
         super();
 
@@ -13,7 +12,7 @@ export class CocosFairyWindow extends Window {
         this.window = new fgui.Window();
         this.window.contentPane = this.view;
 
-        super.Init();
+        this.Init();
     }
 
     Destroy(): void {

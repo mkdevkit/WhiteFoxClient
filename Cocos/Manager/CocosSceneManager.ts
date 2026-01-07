@@ -1,16 +1,8 @@
 import { _decorator, Component, Node, director, SceneAsset } from 'cc';
-import { Entity } from '../../Core/Entity';
+import { AbstractSceneManager } from '../../Manager/AbstractSceneManager';
 
-export class SceneManager extends Entity {
-    private static instance: SceneManager;
+export default class CocosSceneManager extends AbstractSceneManager {
     private currentScene: string = "";
-
-    public static GetInstance(): SceneManager {
-        if (!SceneManager.instance) {
-            SceneManager.instance = new SceneManager();
-        }
-        return SceneManager.instance;
-    }
 
     /**
      * 加载场景

@@ -1,15 +1,15 @@
 import { Entity } from '../../Core/Entity';
 
-export class TimerManager extends Entity {
-    private static instance: TimerManager;
+export default class CocosTimerManager extends Entity {
+    private static instance: CocosTimerManager;
     private timers: Map<number, TimerInfo> = new Map();
     private timerIdCounter: number = 0;
 
-    public static GetInstance(): TimerManager {
-        if (!TimerManager.instance) {
-            TimerManager.instance = new TimerManager();
+    public static GetInstance(): CocosTimerManager {
+        if (!CocosTimerManager.instance) {
+            CocosTimerManager.instance = new CocosTimerManager();
         }
-        return TimerManager.instance;
+        return CocosTimerManager.instance;
     }
 
     /**
